@@ -61,3 +61,15 @@ document.addEventListener("keydown", (e) => {
 
 //  5. Створити модальне відкно аналог Алерта але з гарним дизайном. 
 //  По кліку на кнопку зявляється модальне вікно по центрі екрану(центрування елемента). В модальному вікні має бути текст та кнопка закрити.
+
+let openModal = document.querySelector(".openBtn");
+let closeModal = document.querySelector(".closeBtn");
+
+openModal.addEventListener("click", () => {
+  document.body.classList.add("showModalCentered");
+  document.body.classList.add("showCloseBtn");
+});
+
+closeModal.addEventListener("click", () => {
+  document.body.classList.remove("showModalCentered");
+});

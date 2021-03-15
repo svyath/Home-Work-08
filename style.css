@@ -89,3 +89,72 @@ text-align: center;
     opacity: 0;
     visibility: hidden;
 }
+
+.backdrop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.95);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .2 ease-in-out, visibility .2 ease-in-out;
+}
+
+.modalCentered {
+    margin: 0 auto;
+    display: inline-block;
+    align-items: center;
+    text-align: center;
+    max-width: 600px;
+    max-height: 550px;
+    color: teal;
+    background-color: rgb(84, 182, 247);
+    border: 5px teal solid;
+    border-radius: 10px;
+    padding: 40px;
+}
+
+.modalCentered img {
+    width: 580px;
+    height: 250px;
+}
+
+.showModalCentered .backdrop {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: initial;
+    transition: 0.2s;
+}
+
+.showCloseBtn .button {
+    opacity: 1;
+    visibility: visible;
+}
+
+.openBtn, .closeBtn {
+    min-width: 250px;
+    min-height: 40px;
+    font-size: 18px;
+    font-weight: 700;
+    color: #000000;
+    background: #ffffff;
+    background: linear-gradient(90deg, rgb(18, 247, 216) 0%, rgb(24, 138, 126) 100%);
+    border: 1px black solid;
+    border-radius: 5px;
+    box-shadow: 12px 12px 24px rgba(79,209,197,.64);
+    transition: all 0.3s ease-in-out 0s;
+    cursor: pointer;
+    outline: none;
+    padding: 10px;
+}
+  
+    
+  
+  
+  
+ 
